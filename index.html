@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - BTS SIO SLAM</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="#home">
+                <span class="logo">&lt;Axel BUIRON/&gt;</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#watchtower">Veille</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">👋 Salut, je suis</p>
+                <h1 class="hero-title">Axel</h1>
+                <p class="hero-subtitle">Étudiant en <span class="highlight">BTS SIO option SLAM</span></p>
+                <p class="hero-description">
+                    Développeur passionné par la création d'applications innovantes.
+                    <br>Quand je ne code pas, tu me trouveras en train de faire du sport ou de résoudre des énigmes.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="avatar-container">
+                    <div class="avatar-placeholder">
+                        <span class="avatar-icon">🏃</span>
+                        <p class="avatar-text">Sport & Code</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Découvrir</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- À propos Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="card-icon">🎓</div>
+                    <h3>Formation</h3>
+                    <p>BTS Services Informatiques aux Organisations</p>
+                    <p class="detail">Option SLAM - Solutions Logicielles et Applications Métier</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">💻</div>
+                    <h3>Développement</h3>
+                    <p>Passionné par le code propre et les solutions élégantes</p>
+                    <p class="detail">Toujours en veille sur les nouvelles technos</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🏆</div>
+                    <h3>Sport</h3>
+                    <p>Le dépassement de soi, la discipline, la persévérance</p>
+                    <p class="detail">Des valeurs que j'applique au quotidien</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🧩</div>
+                    <h3>Énigmes</h3>
+                    <p>Résoudre des problèmes complexes est mon kiff</p>
+                    <p class="detail">Esprit logique et analytique</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">Langages</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Web</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">React</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Outils</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Soft Skills</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag soft">Esprit d'équipe</span>
+                        <span class="skill-tag soft">Autonomie</span>
+                        <span class="skill-tag soft">Gestion du temps</span>
+                        <span class="skill-tag soft">Communication</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects-grid">
+                <!-- Projet 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">💻</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Nom du projet</h3>
+                        <p class="project-description">
+                            Description courte du projet. Quelle problématique il résout,
+                            les technologies utilisées, et ton rôle dans le développement.
+                        </p>
+                        <div class="project-techs">
+                            <span class="tech">Python</span>
+                            <span class="tech">SQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-btn">Voir le code →</a>
+                            <a href="#" class="link-btn">Démo →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projet 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">📱</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Nom du projet</h3>
+                        <p class="project-description">
+                            Description courte du projet. Quelle problématique il résout,
+                            les technologies utilisées, et ton rôle dans le développement.
+                        </p>
+                        <div class="project-techs">
+                            <span class="tech">React</span>
+                            <span class="tech">Node.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-btn">Voir le code →</a>
+                            <a href="#" class="link-btn">Démo →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projet 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🛠️</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Nom du projet</h3>
+                        <p class="project-description">
+                            Description courte du projet. Quelle problématique il résout,
+                            les technologies utilisées, et ton rôle dans le développement.
+                        </p>
+                        <div class="project-techs">
+                            <span class="tech">Java</span>
+                            <span class="tech">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-btn">Voir le code →</a>
+                            <a href="#" class="link-btn">Démo →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Veille Technologique Section -->
+    <section id="watchtower" class="section watchtower">
+        <div class="container">
+            <h2 class="section-title">📰 Veille Informatique</h2>
+            <p class="section-subtitle">
+                Rester informé des dernières tendances, c'est essentiel dans notre métier.
+                Voici mes sources et découvertes récentes.
+            </p>
+            <div class="watchtower-grid">
+                <div class="watchtower-card">
+                    <div class="watchtower-header">
+                        <span class="source-icon">📡</span>
+                        <h3>Sources que je suis</h3>
+                    </div>
+                    <ul class="watchtower-list">
+                        <li><a href="https://www.developpez.com" target="_blank" rel="noopener">Developpez.com</a></li>
+                        <li><a href="https://github.com/trending" target="_blank" rel="noopener">GitHub Trending</a></li>
+                        <li><a href="https://news.ycombinator.com" target="_blank" rel="noopener">Hacker News</a></li>
+                        <li><a href="https://www.reddit.com/r/programming" target="_blank" rel="noopener">r/programming</a></li>
+                    </ul>
+                </div>
+                <div class="watchtower-card">
+                    <div class="watchtower-header">
+                        <span class="source-icon">💡</span>
+                        <h3>Dernières découvertes</h3>
+                    </div>
+                    <div class="discoveries">
+                        <div class="discovery-item">
+                            <p class="discovery-title">Une techno / outil découvert</p>
+                            <p class="discovery-desc">Pourquoi c'est intéressant, ce que ça apporte...</p>
+                        </div>
+                        <div class="discovery-item">
+                            <p class="discovery-title">Une techno / outil découvert</p>
+                            <p class="discovery-desc">Pourquoi c'est intéressant, ce que ça apporte...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Me contacter</h2>
+            <p class="section-subtitle">
+                Un projet ? Une opportunité ? Envie d'échanger ?
+            </p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <a href="mailto:ton.email@exemple.com">ton.email@exemple.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💼</span>
+                        <a href="https://www.linkedin.com/in/axel-buiron-777779357/" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Axel - Portfolio BTS SIO SLAM</p>
+            <p class="footer-note">Fait avec passion et beaucoup de café ☕</p>
+        </div>
+    </footer>
+
+    <!-- Easter Egg Hidden Element -->
+    <div id="easter-egg" class="easter-egg hidden">
+        <div class="easter-egg-content">
+            <span class="easter-icon">🧩</span>
+            <h3>Bien joué !</h3>
+            <p>Tu as trouvé l'énigme cachée !</p>
+            <p class="easter-message">"Le sport, c'est comme le code :<br>la clé, c'est la régularité."</p>
+            <button class="btn btn-secondary" id="close-easter">Fermer</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
