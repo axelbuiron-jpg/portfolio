@@ -456,9 +456,6 @@ function trackVisit() {
 // Décommenter pour activer
 // trackVisit();
 
-// ============================================
-// EFFET DE TYPING SUR LE TITRE (Optionnel)
-// ============================================
 
 function typingEffect() {
     const title = document.querySelector('.hero-title');

@@ -20,7 +20,7 @@
         </div>
         <ul class="nav-links">
             <li><a href="#about">À propos</a></li>
-            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#skills">PDF</a></li>
             <li><a href="#projects">Projets</a></li>
             <li><a href="#watchtower">Veille</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -96,44 +96,20 @@
         </div>
     </section>
 
-    <!-- Compétences Section -->
+    <!-- Compétences / Aperçu PDF Section -->
     <section id="skills" class="section skills">
         <div class="container">
-            <h2 class="section-title">Compétences</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="category-title">Langages</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
+            <h2 class="section-title">Aperçu PDF</h2>
+            <p class="section-subtitle">Visualise rapidement le document PDF ci-dessous. Si le PDF n'apparaît pas, ouvre-le dans une nouvelle fenêtre.</p>
+            <div class="pdf-preview">
+                <div class="pdf-frame">
+                    <object data="E5 - Tableau de synthèse.pdf" type="application/pdf" width="100%" height="100%">
+                        <p>Votre navigateur ne peut pas afficher le PDF. <a href="E5 - Tableau de synthèse.pdf" target="_blank" rel="noopener">Télécharger le PDF</a>.</p>
+                    </object>
                 </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Web</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">React</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Outils</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">VS Code</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Soft Skills</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag soft">Esprit d'équipe</span>
-                        <span class="skill-tag soft">Autonomie</span>
-                        <span class="skill-tag soft">Gestion du temps</span>
-                        <span class="skill-tag soft">Communication</span>
-                    </div>
+                <div class="pdf-actions">
+                    <a href="E5 - Tableau de synthèse.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Ouvrir le PDF</a>
+                    <a href="E5 - Tableau de synthèse.pdf" class="btn btn-primary" target="_blank" rel="noopener">Télécharger le PDF</a>
                 </div>
             </div>
         </div>
@@ -147,21 +123,22 @@
                 <!-- Projet 1 -->
                 <article class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">💻</div>
+                        <div class="project-placeholder">🧩</div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Nom du projet</h3>
+                        <h3 class="project-title">Application d'escape game</h3>
                         <p class="project-description">
-                            Description courte du projet. Quelle problématique il résout,
-                            les technologies utilisées, et ton rôle dans le développement.
+                            Application ludique qui permet de jouer à un escape game avec des cartes interactives.
+                            Les joueurs résolvent des énigmes, débloquent des indices et avancent dans l'histoire en manipulant les cartes.
                         </p>
                         <div class="project-techs">
-                            <span class="tech">Python</span>
-                            <span class="tech">SQL</span>
+                            <span class="tech">HTML</span>
+                            <span class="tech">CSS</span>
+                            <span class="tech">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="link-btn">Voir le code →</a>
-                            <a href="#" class="link-btn">Démo →</a>
+                            <a href="https://github.com/axelbuiron-jpg/Unlock" class="link-btn" target="_blank" rel="noopener">Voir le code →</a>
+                            <a href="https://unlock-umber.vercel.app/" class="link-btn" target="_blank" rel="noopener">Démo →</a>
                         </div>
                     </div>
                 </article>
@@ -169,21 +146,17 @@
                 <!-- Projet 2 -->
                 <article class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">📱</div>
+                        <div class="project-placeholder">🧮</div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Nom du projet</h3>
+                        <h3 class="project-title">Calculatrice C#</h3>
                         <p class="project-description">
-                            Description courte du projet. Quelle problématique il résout,
-                            les technologies utilisées, et ton rôle dans le développement.
+                            Développement d'une calculatrice en C# avec une interface claire et des fonctions mathématiques de base.
+                            Ce projet montre ma maîtrise des bases du langage et de la logique de programmation orientée objet.
                         </p>
                         <div class="project-techs">
-                            <span class="tech">React</span>
-                            <span class="tech">Node.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="link-btn">Voir le code →</a>
-                            <a href="#" class="link-btn">Démo →</a>
+                            <span class="tech">C#</span>
+                            <span class="tech">Windows Forms</span>
                         </div>
                     </div>
                 </article>
@@ -191,21 +164,58 @@
                 <!-- Projet 3 -->
                 <article class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">🛠️</div>
+                        <div class="project-placeholder">🧠</div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Nom du projet</h3>
+                        <h3 class="project-title">Site de quiz interactifs</h3>
                         <p class="project-description">
-                            Description courte du projet. Quelle problématique il résout,
-                            les technologies utilisées, et ton rôle dans le développement.
+                            Développement d'un site C# pour jouer comme sur Kahoot et créer ses propres quiz.
+                            Les utilisateurs peuvent lancer des parties, répondre aux questions et gérer les scores.
                         </p>
                         <div class="project-techs">
-                            <span class="tech">Java</span>
-                            <span class="tech">MySQL</span>
+                            <span class="tech">C#</span>
+                            <span class="tech">Windows Forms</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projet 4 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">📁</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">GSB</h3>
+                        <p class="project-description">
+                            Application de gestion d'ordonnances en C# destinée à organiser les prescriptions et les suivis patients.
+                            Ce projet montre ma capacité à gérer des données médicales et à créer des interfaces simples et robustes.
+                        </p>
+                        <div class="project-techs">
+                            <span class="tech">C#</span>
+                            <span class="tech">Windows Forms</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projet 5 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🎮</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Site de tier list</h3>
+                        <p class="project-description">
+                            Création d'un site permettant de créer des tier listes et de les partager de façon ludique.
+                            Les utilisateurs peuvent également jouer aux tier listes pour comparer et évaluer leurs choix.
+                        </p>
+                        <div class="project-techs">
+                            <span class="tech">HTML</span>
+                            <span class="tech">CSS</span>
+                            <span class="tech">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="link-btn">Voir le code →</a>
-                            <a href="#" class="link-btn">Démo →</a>
+                            <a href="https://github.com/axelbuiron-jpg/Tier_list" class="link-btn" target="_blank" rel="noopener">Voir le code →</a>
+                            <a href="https://tier-list-rosy.vercel.app/" class="link-btn" target="_blank" rel="noopener">Démo →</a>
                         </div>
                     </div>
                 </article>
