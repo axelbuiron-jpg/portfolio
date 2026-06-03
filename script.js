@@ -9,6 +9,9 @@
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialiser EmailJS
+    emailjs.init("YOUR_PUBLIC_KEY"); // À remplacer par ta clé EmailJS
+    
     initNavbar();
     initSmoothScroll();
     initScrollAnimations();
@@ -153,21 +156,31 @@ function initContactForm() {
             return;
         }
 
-        // Simulation d'envoi (à remplacer par un vrai backend)
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
 
         submitBtn.textContent = 'Envoi en cours...';
         submitBtn.disabled = true;
 
-        // Simulation délai réseau
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        try {
+            // Envoyer l'email avec EmailJS
+            await emailjs.send(
+                "SERVICE_ID",        // À remplacer par ton Service ID EmailJS
+                "TEMPLATE_ID",       // À remplacer par ton Template ID EmailJS
+                {
+                    from_name: data.name,
+                    from_email: data.email,
+                    message: data.message,
+                    to_email: "axel.buiron@gmail.com"
+                }
+            );
 
-        // Ici, tu mettras ton vrai code d'envoi (EmailJS, Formspree, etc.)
-        console.log('Formulaire soumis:', data);
-
-        showNotification('Message envoyé avec succès !', 'success');
-        form.reset();
+            showNotification('Message envoyé avec succès ! 🎉', 'success');
+            form.reset();
+        } catch (error) {
+            console.error('Erreur EmailJS:', error);
+            showNotification('Erreur lors de l\'envoi. Veuillez réessayer.', 'error');
+        }
 
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;

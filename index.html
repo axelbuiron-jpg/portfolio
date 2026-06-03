@@ -36,7 +36,6 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <p class="hero-greeting">👋 Salut, je suis</p>
                 <h1 class="hero-title">Axel</h1>
                 <p class="hero-subtitle">Étudiant en <span class="highlight">BTS SIO option SLAM</span></p>
                 <p class="hero-description">
@@ -219,6 +218,24 @@
                         </div>
                     </div>
                 </article>
+
+                <!-- Projet 6 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">📝</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Plateforme QCM en ligne</h3>
+                        <p class="project-description">
+                            Site de QCM permettant de créer, modifier et passer des questionnaires en ligne.
+                            L'utilisateur peut gérer ses quiz, ajouter des questions et suivre ses résultats en temps réel.
+                        </p>
+                        <div class="project-techs">
+                            <span class="tech">Django</span>
+                            <span class="tech">Next.js</span>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -238,10 +255,10 @@
                         <h3>Sources que je suis</h3>
                     </div>
                     <ul class="watchtower-list">
+                        <li><a href="https://techcrunch.com" target="_blank" rel="noopener">TechCrunch</a></li>
+                        <li><a href="https://dev.to" target="_blank" rel="noopener">dev.to</a></li>
+                        <li><a href="https://www.reddit.com" target="_blank" rel="noopener">reddit</a></li>
                         <li><a href="https://www.developpez.com" target="_blank" rel="noopener">Developpez.com</a></li>
-                        <li><a href="https://github.com/trending" target="_blank" rel="noopener">GitHub Trending</a></li>
-                        <li><a href="https://news.ycombinator.com" target="_blank" rel="noopener">Hacker News</a></li>
-                        <li><a href="https://www.reddit.com/r/programming" target="_blank" rel="noopener">r/programming</a></li>
                     </ul>
                 </div>
                 <div class="watchtower-card">
@@ -251,12 +268,12 @@
                     </div>
                     <div class="discoveries">
                         <div class="discovery-item">
-                            <p class="discovery-title">Une techno / outil découvert</p>
-                            <p class="discovery-desc">Pourquoi c'est intéressant, ce que ça apporte...</p>
+                            <p class="discovery-title">L'IA révolutionne le rôle des programmeurs</p>
+                            <p class="discovery-desc">Les développeurs deviennent superviseurs d'équipes IA plutôt que de coder à la main. <a href="https://intelligence-artificielle.developpez.com/actu/383643/-Les-programmeurs-n-ecrivent-plus-de-code-a-la-main-ils-jouent-desormais-le-role-de-superviseurs-aupres-d-equipes-d-amis-IA-declare-l-ancien-PDG-de-Google-Eric-Schmidt/" target="_blank" rel="noopener">Lire l'article →</a></p>
                         </div>
                         <div class="discovery-item">
-                            <p class="discovery-title">Une techno / outil découvert</p>
-                            <p class="discovery-desc">Pourquoi c'est intéressant, ce que ça apporte...</p>
+                            <p class="discovery-title">Les compteurs vélo Wahoo analysent plus de données</p>
+                            <p class="discovery-desc">Transpiration, température et respiration : analyse biomédicale avancée pour le cyclisme. <a href="https://www.frandroid.com/marques/wahoo/3124827_transpiration-temperature-respiration-les-compteurs-velo-wahoo-pourront-desormais-analyser-bien-plus-de-donnees" target="_blank" rel="noopener">Lire l'article →</a></p>
                         </div>
                     </div>
                 </div>
@@ -275,7 +292,7 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <span class="contact-icon">📧</span>
-                        <a href="mailto:ton.email@exemple.com">ton.email@exemple.com</a>
+                        <a href="mailto:axel.buiron@gmail.com">axel.buiron@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">💼</span>
@@ -320,6 +337,8 @@
         </div>
     </div>
 
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
