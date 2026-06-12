@@ -10,7 +10,15 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialiser EmailJS
-    emailjs.init("YOUR_PUBLIC_KEY"); // À remplacer par ta clé EmailJS
+    try {
+        if (window.emailjs && typeof emailjs.init === 'function') {
+            emailjs.init("YOUR_PUBLIC_KEY"); // À remplacer par ta clé EmailJS
+        } else {
+            console.warn('EmailJS non disponible — initialisation ignorée.');
+        }
+    } catch (err) {
+        console.warn('Erreur lors de l\'initialisation d\'EmailJS :', err);
+    }
     
     initNavbar();
     initSmoothScroll();
@@ -324,42 +332,57 @@ function initEasterEgg() {
 }
 
 function triggerRiddle() {
-    // Afficher une première énigme
-    const riddle = prompt(
-        `🧩 ÉNIGME ACTIVÉE ! 🧩
+    // Utiliser la modal intégrée pour éviter le blocage des `prompt()`
+    const modal = document.getElementById('riddle-modal');
+    const input = document.getElementById('riddle-answer');
+    const submitBtn = document.getElementById('riddle-submit');
+    const cancelBtn = document.getElementById('riddle-cancel');
+    const feedback = document.getElementById('riddle-feedback');
 
-"Je suis plus fort quand je suis partagé,
-Je m'use si je ne suis pas pratiqué,
-Dans le code comme dans le sport,
-Je suis la clé de ta réussite.
+    if (!modal || !input || !submitBtn || !cancelBtn) {
+        // Fallback: use prompt if modal not found
+        const fallback = prompt('ÉNIGME : Qui suis-je ?');
+        if (!fallback) return;
+        const normalized = fallback.toLowerCase().trim();
+        const answers = ['la pratique', 'pratique', "l'entraînement", 'entrainement', 'entraînement', 'discipline', 'la discipline', 'régularité', 'la régularité'];
+        if (answers.some(a => normalized.includes(a))) showEasterEgg();
+        return;
+    }
 
-Qui suis-je ?"
+    const validAnswers = ['la pratique', 'pratique', "l'entraînement", 'entrainement', 'entraînement', 'discipline', 'la discipline', 'régularité', 'la régularité'];
 
-(Tape ta réponse ci-dessous)`
-    );
+    function closeModal() {
+        modal.classList.remove('active');
+        feedback.textContent = '';
+        input.value = '';
+    }
 
-    if (!riddle) return;
+    function checkAnswer() {
+        const val = input.value.toLowerCase().trim();
+        if (!val) {
+            feedback.textContent = 'Tape une réponse pour continuer.';
+            return;
+        }
 
-    const normalizedRiddle = riddle.toLowerCase().trim();
-    const validAnswers = ['la pratique', 'pratique', 'l\'entraînement', 'entrainement', 'entraînement', 'entrainement', 'discipline', 'la discipline', 'régularité', 'la régularité'];
-
-    if (validAnswers.some(answer => normalizedRiddle.includes(answer))) {
-        // Bonne réponse !
-        showEasterEgg();
-    } else {
-        // Mauvaise réponse
-        const retry = confirm(
-            `❌ Pas tout à fait...
-
-Indice : C'est ce qui fait la différence entre un bon développeur et un excellent développeur.
-
-Veux-tu réessayer ?`
-        );
-
-        if (retry) {
-            triggerRiddle();
+        if (validAnswers.some(a => val.includes(a))) {
+            closeModal();
+            showEasterEgg();
+        } else {
+            feedback.textContent = '❌ Pas tout à fait. Indice : Quel est la différence entre un bon et un très bon codeur ?';
         }
     }
+
+    // Ouvrir la modal
+    modal.classList.add('active');
+    setTimeout(() => input.focus(), 100);
+
+    // Handlers
+    submitBtn.onclick = checkAnswer;
+    cancelBtn.onclick = () => closeModal();
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') checkAnswer();
+        if (e.key === 'Escape') closeModal();
+    });
 }
 
 function showEasterEgg() {

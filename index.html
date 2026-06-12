@@ -36,7 +36,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">Axel</h1>
+                <h1 class="hero-title" title="???">Axel</h1>
                 <p class="hero-subtitle">Étudiant en <span class="highlight">BTS SIO option SLAM</span></p>
                 <p class="hero-description">
                     Développeur passionné par la création d'applications innovantes.
@@ -334,6 +334,25 @@
             <p>Tu as trouvé l'énigme cachée !</p>
             <p class="easter-message">"Le sport, c'est comme le code :<br>la clé, c'est la régularité."</p>
             <button class="btn btn-secondary" id="close-easter">Fermer</button>
+        </div>
+    </div>
+
+    <!-- Riddle Modal (integrated, more reliable than prompt) -->
+    <div id="riddle-modal" class="riddle-modal">
+        <div class="riddle-content">
+            <h3>🧩 ÉNIGME ACTIVÉE ! 🧩</h3>
+            <p>"Je suis plus fort quand je suis partagé,
+            Je m'use si je ne suis pas pratiqué,
+            Dans le code comme dans le sport,
+            Je suis la clé de ta réussite."
+            </p>
+            <label for="riddle-answer">Tape ta réponse :</label>
+            <input type="text" id="riddle-answer" placeholder="Ta réponse...">
+            <div class="riddle-actions">
+                <button class="btn btn-secondary" id="riddle-cancel">Annuler</button>
+                <button class="btn btn-primary" id="riddle-submit">Valider</button>
+            </div>
+            <p id="riddle-feedback" class="riddle-feedback" aria-live="polite"></p>
         </div>
     </div>
 
